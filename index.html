@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de doação</title> <link rel="stylesheet" href="styles.css">
+    <style>
+        .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos para a imagem no card */
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Estilos para o conteúdo do card */
+    .card-content {
+      padding: 20px;
+    }
+
+    /* Estilos para o título do card */
+    .card-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    /* Estilos para o texto do card */
+    .card-text {
+      color: #555;
+    }
+  </style>
+  <title>Card Example</title>
+</head>
+<body>
+
+<div class="card">
+  <img src="https://cdn.sistemawbuy.com.br/arquivos/3f8c9e2faf1aeede00141b38f14c9d79/produtos/KU1VUA2/photoroom-20230720_201440-1-64bb092fb85ad.jpg">
+  <div class="card-content">
+    <h3 class="card-title">Cesta básica</h3>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis mauris, ullamcorper eu lectus vel, varius accumsan nulla.</p>
+  </div>
+</div>
+
+<title>Card Example</title>
+</head>
+<body>
+
+<div class="card">
+  <img src="https://classic.exame.com/wp-content/uploads/2017/07/thinkstockphotos-533833660-1-e1520603478540.jpg?quality=70&strip=info&w=1024">
+  <div class="card-content">
+    <h3 class="card-title">Roupas</h3>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis mauris, ullamcorper eu lectus vel, varius accumsan nulla.</p>
+  </div>
+</div>
+
+    </style>
+</head>
+<header class="cd-header">
+    <div class="header-wrapper">
+        <div class="logo-wrap">
+            <a href="#" class="hover-target"><span>your</span>logo</a>
+        </div>
+        <div class="nav-but-wrap">
+            <div class="menu-icon hover-target">
+                <span class="menu-icon__line menu-icon__line-left"></span>
+                <span class="menu-icon__line"></span>
+                <span class="menu-icon__line menu-icon__line-right"></span>
+            </div>					
+        </div>					
+    </div>				
+</header>
+
+<div class="nav">
+    <div class="nav__content">
+        <ul class="nav__list">
+            <li class="nav__list-item active-nav"><a href="#" class="hover-target">Home</a></li>
+            <li class="nav__list-item"><a href="#" class="hover-target">Portfolio</a></li>
+            <li class="nav__list-item"><a href="#" class="hover-target">Studio</a></li>
+            <li class="nav__list-item"><a href="#" class="hover-target">News</a></li>
+            <li class="nav__list-item"><a href="#" class="hover-target">Contact</a></li>
+        </ul>
+    </div>
+</div>		
+
+
+
+<div class="section full-height over-hide">	
+    <div class="switch-wrap">
+        <h1>Categorias de doação</h1>
+
+<div class='cursor' id="cursor"></div>
+<div class='cursor2' id="cursor2"></div>
+<div class='cursor3' id="cursor3"></div>
+
+<body>
+    <form id="doaçãoForm">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="valor">Valor da doação (R$):</label>
+        <input type="number" id="valor" name="valor" placeholder="R$" required>
+        
+
+        <label for="categoria"> Selecione a categoria</label>
+        <select>
+            <label for="categoria">Categoria:</label>
+            <option value="saude">Saúde</option>
+            <option value="educacao">Educação</option>
+            <option value="meio-ambiente">Meio Ambiente</option>
+            <select id="categoria" name="categoriTGW21L4714-´8675T9-0R8 -WS IR7YRR9O6R EYFYH4R7O52Ç~E3 [-43565QERAACFQFWF3U" required>
+                </select>
+        
+                
+        <button type="Enviar">Doar</button>
+    </form>
+
+    <script>
+        document.getElementById('doaçãoForm').addEventListener('Enviar', function(event){
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const valor = document.getElementById('valor').value;
+
+            //enviar dados para o backend
+            fetch('/doar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({nome, valor}),
+            })
+            .then(Response => response.text()
+            .then(message => alert(message)))
+            .catch(error => console.error('Erro:', error));
+        });
+
+    </script>
+    
+</body>
+</html>
